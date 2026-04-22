@@ -9,10 +9,10 @@ export default function AdminProductos() {
   const [editando, setEditando] = useState(null);
   const [mensaje, setMensaje] = useState('');
 
-  const fetchProductos = async () => {
-    const res = await api.get('/productos');
-    setProductos(res.data);
-  };
+const fetchProductos = async () => {
+  const res = await api.get('/productos/mis-productos');
+  setProductos(res.data);
+};
 
   useEffect(() => {
     (async () => {
